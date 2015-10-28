@@ -5,8 +5,8 @@
 int main(){
 int anzahlcommands=1;
 char *eingabearray=malloc(100);
-char **command=malloc((sizeof(char**))*8);
-char **c_through=malloc((sizeof(char**))*8);
+char **command=malloc((sizeof(char**))*anzahlcommands);
+char **c_through=malloc((sizeof(char**))*anzahlcommands);
 
 
 
