@@ -2,40 +2,29 @@
 #include<stdlib.h>
 #include <string.h>
 
-int main()
-{
-   int c;
-   FILE *datei;
-	char *eingabearray=malloc(1);
-	char **command=malloc(100);
-for (int j=0;j<10;j++){
-command[j]=malloc(100);
+int main(){
+int anzahlcommands=1;
+char *eingabearray=malloc(100);
+char **command=malloc((sizeof(char**))*8);
+char **c_through=malloc((sizeof(char**))*8);
 
-}
-	char **c_through=malloc(100);
-for (int j=0;j<10;j++){
-c_through[j]=malloc(100);
 
-}
-command[3]="printf";
-c_through[3]="\n\nprintf\n-------------------------------------------------------------\n|printf ist eine Funktion die einfach Killah ist.\n|Sie ist einfach hand zu haben und super cool!\n----------------------------------------------------------";
+
+
+command[0]="printf";
+c_through[0]="\n\nprintf\n -------------------------------------------------------------\n|printf ist eine Funktion die einfach Killah ist.            |\n|Sie ist einfach hand zu haben und super cool!               |\n -------------------------------------------------------------\n";
 scanf("%s",eingabearray);
 
-for(int i = 0;i<4;i++){
+for(int i = 0;i<anzahlcommands;i++){
 if(strcmp(eingabearray,command[i])==0){
 
-printf("%s",c_through[i]);
+printf("%s",c_through[i]);}}
 
-}
-}
-  /* datei=fopen("test.txt","r");
-	char *array;
- if(datei != NULL)
-      {
-         while((c=fgetc(datei))!= EOF)
-           printf("%c",c);
-	
-      }*/
+free(eingabearray);
+free(command);
 
- return 0;
-}
+free(c_through);
+
+
+
+ return (0);}
